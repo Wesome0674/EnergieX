@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --obviously_font: "obviously-condensed", sans-serif;
+    --inter_font: "Inter", sans-serif;
+    --Headline-1: 10.25em;
+    --Headline-2: 6.125em;
+    --Headline-3: 4.25em;
+    --body: 10.25em;
+    --link: 10.25em;
+    --button: 10.25em;
+    --caption-1: 1.125em;
+    --caption-2: 10.25em;
+    --caption-3: 10.25em;
+    --linear-blue: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(116,211,250,1) 100%);
+    --pink-color: #FF719D;
+    --white-color: #FFFAF6;
+    --black-color: #000;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section:nth-child(1){
+    width: 100%;
+    min-height: 100vh;
+    background: var(--linear-blue);
+}
+
+h1 {
+    font-family: var(--obviously_font);
+    font-size: var(--Headline-1);
+}
+
+.body-text {
+    font-size: var(--caption-1);
+    font-family: var(--inter_font);
+}
+
+.secondary {
+    font-family: var(--inter_font);
+    font-size: var(--caption-1);
+    color: var(--white-color);
+    background-color: var(--black-color);
+    border-radius: 23px;
+    padding: 8px 30px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 32px;
+    border-radius: 27px;
+    margin: 17px;
+    border: 1px solid var(--black-color);
+    position: relative;
+}
+
+nav > * {
+    cursor: pointer;
+}
+
+nav::before {
+    position: absolute;
+    content: url(/assets/img/svg/badge.png);
+    bottom: -50px;
+    left: 25%;
+}
+
+ .left-part, .right-part {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.primary-button {
+    font-family: var(--inter_font);
+    font-size: var(--caption-1);
+    color: var(--black-color);
+    background-color: var(--white-color);
+    border-radius: 23px;
+    padding: 12px 30px;
+    font-weight: 600;
+    border: 1px solid var(--black-color);
+    cursor: pointer;
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+.primary-button:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+}
+  
+header{
+    max-width: 1640px;
+    padding: 0 20px;
+    margin: 164px auto;
+}
+
+.header-info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.header-info p {
+    max-width: 400px;
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+}
+
+.rate {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
