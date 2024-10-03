@@ -13,6 +13,8 @@
     --caption-2: 10.25em;
     --caption-3: 10.25em;
     --linear-blue: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(116,211,250,1) 100%);
+    --linear-green: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(198,234,142,1) 100%);
+    --linear-meta: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(170,169,173,1) 100%);
     --pink-color: #FF719D;
     --white-color: #FFFAF6;
     --black-color: #000;
@@ -27,7 +29,7 @@
 section:nth-child(1){
     width: 100%;
     min-height: 100vh;
-    background: var(--linear-blue);
+    background: var(--linear-green);
 }
 
 h1 {
@@ -104,7 +106,14 @@ nav::before {
 header{
     max-width: 1640px;
     padding: 0 20px;
-    margin: 164px auto;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-img img {
+    max-width: 800px;
 }
 
 .header-info{
