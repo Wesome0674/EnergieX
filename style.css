@@ -514,4 +514,6 @@ section:nth-child(4)::after {
     }
 }
 
-.rate:nth-child(1)
+.rate:nth-child(1) {
+    margin-bottom: -50px;
+}
