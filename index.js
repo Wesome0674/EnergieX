@@ -65,9 +65,11 @@ document.getElementById("test1").innerHTML = card_info
             </div>
             <p class="body-font2">2.99$</p>
           </div>
-          <img class="product-img" src=${card.img} alt="" />
+          <div class="product-img">
+           <img  src=${card.img} alt="" />
+          </div>
           <div class="product_info">
-            <p class="uppercase">${card.taste}</p>
+            <p style="max-width: 200px;" class="uppercase">${card.taste}</p>
             <button class="button-primary">ADD TO CART</button>
           </div>
         </div>`

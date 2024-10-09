@@ -82,6 +82,7 @@
   font-size: 159.57px;
   line-height: 172px;
   text-transform: uppercase;
+  animation: slideIn 500ms ease-in-out;
 }
 
 .headline2 {
@@ -132,6 +133,7 @@
   font-weight: 700;
   font-size: 17.97px;
   line-height: 27px;
+  text-transform: uppercase;
 }
 
 .body-font {
@@ -151,7 +153,7 @@
 
 .caption {
   font-family: var(--inter_font);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
   line-height: 150%;
 }
@@ -171,20 +173,345 @@
   line-height: 150%;
 }
 
-section{
-    width: 100%;
-    min-height: 100vh;
+section {
+  width: 100%;
 }
 
-section:nth-child(odd){
-    background: var(--linear-blue);
+section:nth-child(1) {
+  min-height: 100vh;
 }
 
-section:nth-child(even){
-    background: var(--linear-pink);
+section:nth-child(odd) {
+  background: var(--linear-blue);
+}
+
+section:nth-child(even) {
+  background: var(--linear-pink);
 }
 
 footer {
-    background-color: var(--blue-color);
-    color: var(--white-color);
+  background-color: var(--blue-color);
+  color: var(--white-color);
 }
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav {
+  display: flex;
+  padding: 10px 20px;
+  border: 1px solid black;
+  justify-content: space-between;
+  border-radius: 27px;
+  align-items: center;
+  margin: 17px;
+}
+
+.button-primary {
+  border: 1px solid black;
+  background-color: var(--white-color);
+  font-family: var(--inter_font);
+  font-size: 16px;
+  padding: 15px 45px;
+  border-radius: 27px;
+  font-weight: 700;
+  width: fit-content;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 black;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+}
+
+.button-secondary {
+  border: none;
+  background-color: var(--black-color);
+  font-family: var(--inter_font);
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--white-color);
+  padding: 15px 45px;
+  border-radius: 27px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: 250ms ease-in;
+}
+
+.button-secondary:hover {
+  transform: translateY(-7px);
+  transition: 250ms ease-in;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1640px;
+  margin: 135px auto;
+}
+
+.headerimg {
+  position: relative;
+}
+
+.headerimg > img:nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: scale 800ms ease-in-out;
+}
+
+@keyframes scale {
+  0% {
+    scale: 0%;
+  }
+  100% {
+    scale: 100%;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    margin-left: -2000px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+.flavours-title {
+  text-align: center;
+}
+
+.flavours-title > p:nth-child(1) {
+  color: var(--pink-color);
+  margin-top: 85px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 90px 0;
+}
+
+.card-product {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.product_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.product-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card-product:nth-child(1) {
+  background: var(--vert-tropical);
+}
+
+.card-product:nth-child(2) {
+  background: var(--linear-jaune);
+}
+
+.card-product:nth-child(3) {
+  background: var(--linear-vert);
+}
+
+.card-product:nth-child(4) {
+  background: var(--linear-rose2);
+}
+
+.card-product:nth-child(5) {
+  background: var(--linear-orange);
+}
+.card-product:nth-child(6) {
+  background: var(--linear-rouge);
+}
+.card-product:nth-child(7) {
+  background: var(--linear-violet);
+}
+.card-product:nth-child(8) {
+  background: var(--linear-beige);
+}
+.card-product:nth-child(9) {
+  background: var(--linear-pamplemouse);
+}
+
+.action-section {
+  padding: 100px 64px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.action-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.avantages div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-transform: uppercase;
+}
+.avantages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.buttons-action {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.menu-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid var(--black-color);
+  padding-bottom: 60px;
+  margin-bottom: 32px;
+}
+
+footer {
+  padding: 80px 64px;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  display: flex;
+  gap: 32px;
+}
+
+.social {
+  display: flex;
+  gap: 12px;
+}
+
+.credit {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  display: grid;
+  place-content: center;
+}
+
+.form-input,
+.message {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px 20px 0;
+  gap: 10px;
+}
+
+.input-text {
+  height: 48px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid black;
+  min-width: 372px;
+  padding: 15px;
+  font-family: var(--inter_font);
+}
+
+textarea {
+  font-family: var(--inter_font);
+  padding: 15px;
+  width: 100%;
+}
+
+.form-user div {
+  display: flex;
+}
+
+form {
+  margin: 112px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 20px 240px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 50;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+}
+
+section:nth-child(4) {
+  position: relative;
+  overflow: hidden;
+}
+
+section:nth-child(4)::before {
+    content: url(/assets/img/png/can_glass1.png);
+    position: absolute;
+    bottom: -200px;
+    left: 100px;
+    animation: slideToTop 1500ms ease-in-out;
+}
+section:nth-child(4)::after {
+    content: url(/assets/img/png/can_glass2.png);
+    position: absolute;
+    bottom: -200px;
+    right: -150px;
+    animation: slideToTop 1400ms ease-in-out;
+}
+
+@keyframes slideToTop {
+    0% {
+        bottom: -2000px;
+    }
+    100% {
+        bottom: -200px;
+    }
+}
+
+.rate:nth-child(1)
