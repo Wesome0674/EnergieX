@@ -175,6 +175,7 @@
 
 section {
   width: 100%;
+  padding: 0 20px;
 }
 
 section:nth-child(1) {
@@ -211,8 +212,9 @@ nav {
   z-index: 5;
   position: fixed;
   top: 0;
-  width: 98%;
-  margin: 17px;
+  left: 0;
+  width: 100vw;
+  margin: 17px 0;
 }
 
 .button-primary {
