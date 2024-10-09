@@ -1,138 +1,190 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Variable de couleurs et font. */
 
 :root {
-    --obviously_font: "obviously-condensed", sans-serif;
-    --inter_font: "Inter", sans-serif;
-    --Headline-1: 10.25em;
-    --Headline-2: 6.125em;
-    --Headline-3: 4.25em;
-    --body: 10.25em;
-    --link: 10.25em;
-    --button: 10.25em;
-    --caption-1: 1.125em;
-    --caption-2: 10.25em;
-    --caption-3: 10.25em;
-    --linear-blue: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(116,211,250,1) 100%);
-    --linear-green: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(198,234,142,1) 100%);
-    --linear-meta: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(170,169,173,1) 100%);
-    --pink-color: #FF719D;
-    --white-color: #FFFAF6;
-    --black-color: #000;
+  --obviously_font: "obviously-condensed", sans-serif;
+  --inter_font: "Inter", sans-serif;
+  --linear-blue: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(116, 211, 250, 1) 100%
+  );
+  --linear-pink: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(250, 194, 216, 1) 100%
+  );
+  --vert-tropical: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    #00ffaa 100%
+  );
+  --linear-jaune: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    #ffd700 100%
+  );
+  --linear-orange: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    #ff4500 100%
+  );
+  --linear-violet: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    #4b0082 100%
+  );
+  --linear-pamplemouse: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    #ff6347 100%
+  );
+  --linear-beige: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    #f5deb3 100%
+  );
+  --linear-rouge: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    #8b0000 100%
+  );
+  --linear-rose2: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    #ff007f 100%
+  );
+  --linear-vert: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    #a8e05f 100%
+  );
+  --pink-color: #ff719d;
+  --white-color: #fffaf6;
+  --black-color: #000;
+  --blue-color: #55b7e0;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* Reset style par default */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-section:nth-child(1){
+/* Styles des different text présent. */
+
+.headline1 {
+  font-family: var(--obviously_font);
+  font-weight: 900;
+  font-size: 159.57px;
+  line-height: 172px;
+  text-transform: uppercase;
+}
+
+.headline2 {
+  font-family: var(--obviously_font);
+  font-weight: 700;
+  font-size: 68.91px;
+  line-height: 84px;
+  text-transform: uppercase;
+}
+
+.headline3 {
+  font-family: var(--obviously_font);
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 110%;
+}
+
+.headline4 {
+  font-family: var(--obviously_font);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+}
+
+.headline5 {
+  font-family: var(--obviously_font);
+  font-weight: 200;
+  font-size: 39.71px;
+  line-height: 19px;
+}
+
+.body-font2 {
+  font-family: var(--inter_font);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.body_bold {
+  font-family: var(--inter_font);
+  font-weight: 700;
+  font-size: 17.97px;
+  line-height: 27px;
+}
+
+.uppercase {
+  font-family: var(--inter_font);
+  font-weight: 700;
+  font-size: 17.97px;
+  line-height: 27px;
+}
+
+.body-font {
+  font-family: var(--inter_font);
+  font-weight: 500;
+  font-size: 13.88px;
+  line-height: 16px;
+}
+
+.tagline {
+  font-family: var(--inter_font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.caption {
+  font-family: var(--inter_font);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.underline {
+  font-family: var(--inter_font);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  text-decoration: underline;
+}
+
+.link {
+  font-family: var(--inter_font);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+section{
     width: 100%;
     min-height: 100vh;
-    background: var(--linear-green);
 }
 
-h1 {
-    font-family: var(--obviously_font);
-    font-size: var(--Headline-1);
+section:nth-child(odd){
+    background: var(--linear-blue);
 }
 
-.body-text {
-    font-size: var(--caption-1);
-    font-family: var(--inter_font);
+section:nth-child(even){
+    background: var(--linear-pink);
 }
 
-.secondary {
-    font-family: var(--inter_font);
-    font-size: var(--caption-1);
+footer {
+    background-color: var(--blue-color);
     color: var(--white-color);
-    background-color: var(--black-color);
-    border-radius: 23px;
-    padding: 8px 30px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-}
-
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 32px;
-    border-radius: 27px;
-    margin: 17px;
-    border: 1px solid var(--black-color);
-    position: relative;
-}
-
-nav > * {
-    cursor: pointer;
-}
-
-nav::before {
-    position: absolute;
-    content: url(/assets/img/svg/badge.png);
-    bottom: -50px;
-    left: 25%;
-}
-
- .left-part, .right-part {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.primary-button {
-    font-family: var(--inter_font);
-    font-size: var(--caption-1);
-    color: var(--black-color);
-    background-color: var(--white-color);
-    border-radius: 23px;
-    padding: 12px 30px;
-    font-weight: 600;
-    border: 1px solid var(--black-color);
-    cursor: pointer;
-    width: fit-content;
-    transition: all 0.3s ease-in-out;
-    border: 1px solid black;
-    box-shadow: 0 0 0 0 black;
-}
-
-.primary-button:hover {
-    transform: translateY(-4px) translateX(-2px);
-    box-shadow: 2px 5px 0 0 black;
-}
-  
-header{
-    max-width: 1640px;
-    padding: 0 20px;
-    align-items: center;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.header-img img {
-    max-width: 800px;
-}
-
-.header-info{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.header-info p {
-    max-width: 400px;
-}
-
-.stars {
-    display: flex;
-    gap: 5px;
-}
-
-.rate {
-    display: flex;
-    align-items: center;
-    gap: 15px;
 }
