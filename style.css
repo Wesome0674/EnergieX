@@ -628,6 +628,10 @@ aside {
     flex-direction: column;
   }
 
+  aside {
+    
+  }
+
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
