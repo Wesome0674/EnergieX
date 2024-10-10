@@ -1,25 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/krn6zoj.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EnergieX | Home</title>
+    <title>EnergieX | Accueil</title>
   </head>
   <body>
-    <section>
+    <section id="home">
       <div class="nav-container">
         <nav>
-          <div class="menu">
+          <div class="menu1">
             <img src="/assets/img/svg/menu_burger.svg" alt="" />
-            <p class="body_bold">Shop</p>
+            <a href="#home" class="linkAnim">
+              <p class="body_bold">Accueil</p>
+            </a>
+            <a href="#flavours" class="linkAnim">
+              <p class="body_bold">Saveurs</p>
+            </a>
+            <a href="#contact" class="linkAnim">
+              <p class="body_bold">Contact</p>
+            </a>
           </div>
           <img src="/assets/img/png/energiex.png" alt="" />
-          <div class="menu">
+          <div class="menu2">
             <img class="profile-img" src="/assets/img/svg/profile.svg" alt="" />
             <button style="padding: 5px 30px" class="button-secondary">
-              Cart
+              Panier
             </button>
           </div>
         </nav>
@@ -34,16 +42,18 @@
               <img src="/assets/img/svg/start_filled.svg" alt="" />
               <img src="/assets/img/svg/star_half.svg" alt="" />
             </div>
-            <p class="body-font2">4644+ Verified reviews</p>
+            <p class="body-font2">4644+ avis vérifiés</p>
           </div>
           <h1 class="headline1">
-            brand new <br />
-            energy Drink
+            nouvelle <br />
+            boisson énergisante
           </h1>
           <p class="uppercase" style="max-width: 400px">
-            Unleash your potential with EnergieX: a bold adventure in every sip!
+            Libérez votre potentiel avec EnergieX : une aventure audacieuse à chaque gorgée !
           </p>
-          <button class="button-primary">SHOP NOW</button>
+          <a href="#flavours">
+            <button class="button-primary">ACHETER MAINTENANT</button>
+          </a>
         </div>
         <div class="headerimg">
           <img src="/assets/img/png/header_can.png" alt="" />
@@ -51,69 +61,72 @@
         </div>
       </header>
     </section>
-    <section>
+    <section id="flavours">
       <div class="flavours-title">
-        <p class="headline5">Expore</p>
-        <p class="headline2">The Flavours</p>
+        <p class="headline5">Découvrez</p>
+        <p class="headline2">Les Saveurs</p>
       </div>
       <div class="product-grid" id="test1"></div>
     </section>
     <section>
       <div class="action-section">
         <div class="action-info">
-          <p style="color: #ff719d" class="tagline">ENERGIZE</p>
-          <h4 class="headline4">Unlock Your Potential with energieX</h4>
+          <p style="color: #ff719d" class="tagline">ENERGISEZ</p>
+          <h4 class="headline4">Déverrouillez votre potentiel avec EnergieX</h4>
           <p class="body-font2">
-            Experience a surge in focus and clarity with energieX. Our unique
-            formula enhances physical performance without the dreaded crash.
+            Ressentez une montée de concentration et de clarté avec EnergieX. Notre formule unique améliore les performances physiques sans les inconvénients du crash.
           </p>
           <div class="avantages">
             <div>
               <img src="/assets/img/svg/graphic.svg" alt="" />
               <p class="caption">
-                Boost your concentration and stay sharp all day.
+                Boostez votre concentration et restez alerte toute la journée.
               </p>
             </div>
             <div>
               <img src="/assets/img/svg/rocket.svg" alt="" />
               <p class="caption">
-                Elevate your workouts and achieve your fitness goals.
+                Élevez vos entraînements et atteignez vos objectifs de fitness.
               </p>
             </div>
             <div>
               <img src="/assets/img/svg/check.svg" alt="" />
               <p class="caption">
-                Enjoy sustained energy without the jitters or crash.
+                Profitez d'une énergie durable sans nervosité ni crash.
               </p>
             </div>
           </div>
           <div class="buttons-action">
-            <button class="button-primary">SHOP NOW</button>
+            <button class="button-primary">ACHETER MAINTENANT</button>
             <button class="button-secondary">
-              <p>See shops avaible</p>
+              <p>Voir les boutiques disponibles</p>
               <img src="/assets/img/svg/cart.svg" alt="" />
             </button>
           </div>
         </div>
-        <img style="max-width: 800px; object-fit: cover; aspect-ratio: 16 / 9;" src="/assets/img/png/canPresentation.png" alt="" />
+        <img
+          style="max-width: 800px; object-fit: cover; aspect-ratio: 16 / 9"
+          src="/assets/img/png/canPresentation.png"
+          alt="Canette EnergieX"
+        />
       </div>
     </section>
-    <section>
+    <section id="contact">
       <div class="form-container">
         <form action="">
-          <p class="tagline">get in touch</p>
-          <h3 class="headline3">Contact us</h3>
+          <p class="tagline">Prenez contact</p>
+          <h3 class="headline3">Contactez-nous</h3>
           <p class="body-font2">
-            Reach out to us to be the fisrt to taste our drinks.
+            Contactez-nous pour être les premiers à goûter nos boissons.
           </p>
           <div class="form-user">
             <div>
               <div class="form-input">
-                <label class="link" for="">First name</label>
+                <label class="link" for="">Prénom</label>
                 <input class="input-text" type="text" />
               </div>
               <div class="form-input">
-                <label class="link" for="">Last name</label>
+                <label class="link" for="">Nom</label>
                 <input class="input-text" type="text" />
               </div>
             </div>
@@ -123,7 +136,7 @@
                 <input class="input-text" type="email" />
               </div>
               <div class="form-input">
-                <label class="link" for="">Phone number</label>
+                <label class="link" for="">Numéro de téléphone</label>
                 <input class="input-text" type="tel" />
               </div>
             </div>
@@ -133,27 +146,31 @@
                 rows="10"
                 name=""
                 id=""
-                placeholder="Type your message..."
+                placeholder="Tapez votre message..."
               ></textarea>
               <div>
                 <input style="margin-right: 15px" type="checkbox" />
-                <p class="underline">I accept the Terms</p>
+                <p class="underline">J'accepte les Conditions</p>
               </div>
             </div>
           </div>
-          <button class="button-primary">SUBMIT</button>
+          <button class="button-primary">SOUMETTRE</button>
         </form>
       </div>
     </section>
     <footer>
       <div class="menu-footer">
-        <img src="/assets/img/svg/energiex.svg" alt="" />
+        <img src="/assets/img/png/energiex.png" alt="" />
         <ul>
-          <li class="link">Link One</li>
-          <li class="link">Link Two</li>
-          <li class="link">Link Three</li>
-          <li class="link">Link Four</li>
-          <li class="link">Link Five</li>
+          <a href="#home" class="linkAnim">
+            <li class="link">Accueil</li>
+          </a>
+          <a href="#flavours" class="linkAnim">
+            <li class="link">Saveurs</li>
+          </a>
+          <a href="#contact" class="linkAnim">
+            <li class="link">Contact</li>
+          </a>
         </ul>
         <div class="social">
           <img src="/assets/img/svg/facebook.svg" alt="" />
@@ -164,9 +181,9 @@
       </div>
       <div class="credit">
         <ul>
-          <li class="caption">2024 Boularand Killian. All right reserved.</li>
-          <li class="underline">Privacy Policy</li>
-          <li class="underline">Cookies Settings</li>
+          <li class="caption">2024 Boularand Killian. Tous droits réservés.</li>
+          <li class="underline">Politique de confidentialité</li>
+          <li class="underline">Paramètres des cookies</li>
         </ul>
       </div>
     </footer>

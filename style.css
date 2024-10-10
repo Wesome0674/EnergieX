@@ -74,6 +74,8 @@
   box-sizing: border-box;
 }
 
+
+
 /* Styles des different text présent. */
 
 .headline1 {
@@ -195,10 +197,44 @@ footer {
   color: var(--white-color);
 }
 
-.menu {
+.menu1 {
   display: flex;
   align-items: center;
   gap: 20px;
+  width: 100%;
+}
+
+.menu2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.linkAnim {
+  color: var(--black-color);
+  position: relative;
+  text-decoration: none;
+}
+
+.linkAnim::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #18272F;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.linkAnim:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 nav {
@@ -265,6 +301,20 @@ nav {
   transition: 250ms ease-in;
 }
 
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
 .header-info {
   display: flex;
   flex-direction: column;
@@ -295,6 +345,30 @@ header {
   animation: scale 800ms ease-in-out;
 }
 
+.stars img:nth-child(1) {
+  animation: scale 800ms ease-in-out;
+}
+.stars img:nth-child(2) {
+  animation: scale 800ms ease-in-out;
+  animation-delay: 300ms;
+}
+.stars img:nth-child(3) {
+  animation: scale 800ms ease-in-out;
+  animation-delay: 300ms;
+}
+.stars img:nth-child(4) {
+  animation: scale 800ms ease-in-out;
+  animation-delay: 300ms;
+}
+.stars img:nth-child(5) {
+  animation: scale 800ms ease-in-out;
+  animation-delay: 300ms;
+}
+
+header .button-primary {
+  animation: slideIn 500ms ease-in-out;
+}
+
 @keyframes scale {
   0% {
     scale: 0%;
@@ -311,6 +385,9 @@ header {
   100% {
     margin-left: 0px;
   }
+}
+.flavours-title {
+  text-align: center;
 }
 
 .flavours-title {
@@ -342,15 +419,27 @@ header {
 
 .product_info {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 
 .product-img {
-  width: 100%;
   display: flex;
   justify-content: center;
+  transition: 500ms ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+nav, footer > * {
+  cursor: pointer;
+}
+
+.product-img:hover {
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
 }
 
 .card-product:nth-child(1) {
@@ -508,6 +597,16 @@ form {
   z-index: 50;
 }
 
+nav::before {
+  position: absolute;
+  content: url(/assets/img/png/badge.png);
+  bottom: -50px;
+  left: 25%;
+  width: 20px;
+  aspect-ratio: 1/1;
+  animation: scale 800ms ease-in-out;
+}
+
 .message {
   display: flex;
   align-items: center;
@@ -550,8 +649,10 @@ section:nth-child(4)::after {
   height: 100px;
   width: 80px;
   object-fit: cover;
-  filter: drop-shadow(0px 4px 4px #000000);
+  filter: drop-shadow(0px 4px 4px #818181);
   border-radius: 10px;
+  animation: slideTop 500ms ease-in;
+  transition: 500ms;
 }
 .quick_product {
   width: fit-content;
@@ -560,8 +661,9 @@ section:nth-child(4)::after {
 
 .img_preview img {
   object-fit: cover;
-  filter: drop-shadow(0px 4px 4px #000000);
+  filter: drop-shadow(0px 4px 4px #818181);
   border-radius: 30px;
+  transition: 800ms;
 }
 
 .path {
@@ -715,7 +817,7 @@ aside {
     align-items: center;
   }
 
-  .menu p, .profile-img {
+  .menu1 p, .profile-img, nav:before {
     display: none;
   }
 
