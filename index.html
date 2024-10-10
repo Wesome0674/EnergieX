@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/krn6zoj.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EnergieX | Accueil</title>
   </head>
@@ -49,7 +50,8 @@
             boisson énergisante
           </h1>
           <p class="uppercase" style="max-width: 400px">
-            Libérez votre potentiel avec EnergieX : une aventure audacieuse à chaque gorgée !
+            Libérez votre potentiel avec EnergieX : une aventure audacieuse à
+            chaque gorgée !
           </p>
           <a href="#flavours">
             <button class="button-primary">ACHETER MAINTENANT</button>
@@ -74,7 +76,9 @@
           <p style="color: #ff719d" class="tagline">ENERGISEZ</p>
           <h4 class="headline4">Déverrouillez votre potentiel avec EnergieX</h4>
           <p class="body-font2">
-            Ressentez une montée de concentration et de clarté avec EnergieX. Notre formule unique améliore les performances physiques sans les inconvénients du crash.
+            Ressentez une montée de concentration et de clarté avec EnergieX.
+            Notre formule unique améliore les performances physiques sans les
+            inconvénients du crash.
           </p>
           <div class="avantages">
             <div>
@@ -97,7 +101,9 @@
             </div>
           </div>
           <div class="buttons-action">
-            <button class="button-primary">ACHETER MAINTENANT</button>
+            <a href="/product.html#items1">
+              <button class="button-primary">ACHETER MAINTENANT</button>
+            </a>
             <button class="button-secondary">
               <p>Voir les boutiques disponibles</p>
               <img src="/assets/img/svg/cart.svg" alt="" />
@@ -157,6 +163,20 @@
           <button class="button-primary">SOUMETTRE</button>
         </form>
       </div>
+      <img
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        class="imgGlass1"
+        src="/assets/img/png/can_glass1.png"
+        alt=""
+      />
+      <img
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        class="imgGlass2"
+        src="/assets/img/png/can_glass2.png"
+        alt=""
+      />
     </section>
     <footer>
       <div class="menu-footer">
@@ -188,5 +208,9 @@
       </div>
     </footer>
     <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

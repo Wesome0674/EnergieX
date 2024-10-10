@@ -418,6 +418,19 @@ header .button-primary {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  animation: jumpIn  ease-in;
+  animation-timeline: view();
+  animation-range-end: contain 0% ;
+  animation-range-end: contain 30% ;
+}
+
+@keyframes jumpIn {
+  0%{
+    transform: translateY(2000px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
 }
 
 .product_info {
@@ -620,19 +633,26 @@ section:nth-child(4) {
   overflow: hidden;
 }
 
-section:nth-child(4)::before {
-  content: url(/assets/img/png/can_glass1.png);
+.imgGlass1 {
   position: absolute;
   bottom: -200px;
   left: 100px;
-  animation: slideToTop 1500ms ease-in-out;
+  
 }
-section:nth-child(4)::after {
-  content: url(/assets/img/png/can_glass2.png);
+.imgGlass2 {
   position: absolute;
   bottom: -200px;
   right: -150px;
-  animation: slideToTop 1400ms ease-in-out;
+  
+}
+
+@keyframes parallaxY {
+  from {
+     translate: 0 -100px;
+  }
+  to {
+     translate: 0 100px;
+  }
 }
 
 @keyframes slideToTop {
@@ -648,24 +668,14 @@ section:nth-child(4)::after {
   margin-bottom: -50px;
 }
 
-.quick_product img {
-  height: 100px;
-  width: 80px;
-  object-fit: cover;
-  filter: drop-shadow(0px 4px 4px #818181);
-  border-radius: 10px;
-  animation: slideTop 500ms ease-in;
-  transition: 500ms;
+.img_preview {
+  width: 100%;
 }
-.quick_product {
-  width: fit-content;
-}
-
 
 .img_preview img {
-  object-fit: cover;
   filter: drop-shadow(0px 4px 4px #818181);
   border-radius: 30px;
+  width: 100%;
   transition: 800ms;
 }
 
@@ -678,12 +688,14 @@ section:nth-child(4)::after {
 .preview {
   display: flex;
   gap: 16px;
+  width: 50%;
 }
 
 .product-details {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  width: 60%;
 }
 
 aside {
@@ -741,6 +753,7 @@ aside {
   }
 }
 
+
 @media (max-width: 1170px) {
   .action-section {
     flex-direction: column;
@@ -748,6 +761,14 @@ aside {
 
   aside {
     flex-direction: column;
+  }
+
+  .preview {
+    width: 80%;
+  }
+
+  .product-details{
+    width: 100%;
   }
 
   .product-grid {
@@ -777,12 +798,15 @@ aside {
 
 
 }
-
 @media (max-width: 948px) {
   header {
     flex-direction: column;
     align-items: flex-start;
     gap: 50px;
+  }
+
+  .action-section{
+    padding: 10px;
   }
 
   section:nth-child(4)::before {
@@ -840,8 +864,9 @@ aside {
     line-height: 120%;
   }
 
-  .preview, .quick_product{
+  .preview, aside{
     flex-direction: column;
+    
   }
 
   .quick_product{
