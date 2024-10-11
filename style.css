@@ -420,7 +420,6 @@ header .button-primary {
   gap: 30px;
   animation: jumpIn  ease-in;
   animation-timeline: view();
-  animation-range-end: contain 0% ;
   animation-range-end: contain 30% ;
 }
 
