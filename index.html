@@ -4,17 +4,33 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/krn6zoj.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/assets/img/png/badge.png">
     <title>EnergieX | Accueil</title>
   </head>
   <body>
     <section id="home">
+      <div class="menu-burger">
+        <div class="top">
+          <img src="/assets/img/png/energiex.png" alt="">
+          <img class="toogle-button2" style="width: 30px; aspect-ratio: 1/1; cursor: pointer;" src="/assets/img/svg/close.svg" alt="">
+        </div>
+        <ul>
+          <a class="linkAnim" href="#home">
+            <li class="headline4">Home</li>
+          </a>
+          <a class="linkAnim" href="#flavours">
+            <li class="headline4">Product</li>
+          </a>
+          <a class="linkAnim" href="#contact">
+            <li class="headline4">Contact</li>
+          </a>
+        </ul>
+      </div>
       <div class="nav-container">
         <nav>
           <div class="menu1">
-            <img src="/assets/img/svg/menu_burger.svg" alt="" />
+            <img class="toogle-button" src="/assets/img/svg/menu_burger.svg" alt="" />
             <a href="#home" class="linkAnim">
               <p class="body_bold">Accueil</p>
             </a>
@@ -209,9 +225,5 @@
       </div>
     </footer>
     <script src="index.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>

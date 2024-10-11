@@ -99,3 +99,16 @@ document.getElementById("test1").innerHTML = card_info
         </div>`
   )
   .join("");
+
+
+const toggleBtn = document.querySelector('.toogle-button');
+const toggleBtn2 = document.querySelector('.toogle-button2');
+const menu = document.querySelector('.menu-burger');
+
+toggleBtn.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
+toggleBtn2.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
